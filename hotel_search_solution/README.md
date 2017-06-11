@@ -19,8 +19,8 @@ would be the path of least resistance.
 # Solution
 
 I use tornado's AsyncHttpClient to create the requests and store a list of futures to wait for the responses to come in.
-When they are all in each response is parsed and it's hotels added to a list of 2-tuples.
+When they are all in each response is parsed and its hotels added to a list of 2-tuples.
 The first element of the tuple is the hotel's ecstasy and the second is the hotel data.
-To use python's heapq.merge they need to be in reverse order so the hotel's with the smallest ecstasy come first.
+To use python's heapq.merge they need to be in reverse order so the hotels with the smallest ecstasy come first.
 Then I merge all the lists of tuples. The result is a list of tuples with smallest ecstasy first.
 I reverse that list and convert it from a list of tuples to a list with just the hotel data and write the response.
