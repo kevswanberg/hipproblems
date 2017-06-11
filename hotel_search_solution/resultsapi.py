@@ -7,6 +7,7 @@ HOTEL_PROVIDERS = ['expedia', 'orbitz', 'priceline', 'travelocity', 'hilton']
 
 
 class ResultsHandler(web.RequestHandler):
+
     @gen.coroutine
     def get(self):
         client= httpclient.AsyncHTTPClient()
